@@ -1,0 +1,171 @@
+// imports
+@import "variables";
+@import "mixins";
+
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+// body and general
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.half {
+    width: 50%;
+}
+
+.flex {
+    display:flex;
+}
+
+// font styling 
+h1 {
+    @include h1-style;
+    color: $h1-color;
+}
+
+p {
+    @include p-style;
+    color: $p-color;
+}
+
+a {
+    @include a-style;
+    @include btn-style($primary-color, false);
+}
+
+#secondary-btn {
+    @include btn-style($primary-color, true);
+}
+
+// container
+.container {
+    @include container-spacing(42%, true);
+}
+
+.container--content {
+    width: 69%;
+}
+
+.container--graphic {
+    position: absolute;
+    top: 1rem;
+    right: -3rem;
+}
+
+// modal container
+.modal-container {
+    @include container-spacing(42%, false);
+    position: relative;
+    bottom: 19rem;
+    background-color: white;
+
+}
+
+.modal--gradient {
+    background-image: linear-gradient(to bottom right, #6638F0, #5CC9F5);
+    background-size: cover;
+    border-radius: 0.5rem 0 0 0.5rem;
+    margin-right: 2rem;
+}
+
+.modal--content {
+    padding: 2rem 3rem 4rem 0rem;
+    p {
+        padding-bottom: 1rem;
+    }
+    img {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+// media queries
+@include xs {
+    .container {
+        max-width: none;
+        .container--graphic {
+            top: 11rem;
+            right: -2rem;
+            img {
+                width: 8rem;
+            }
+        }
+    }
+    .modal-container {
+        max-width: 78%;
+        .modal--gradient {
+            width: 0;
+        }
+        .modal--content {
+            width: auto;
+        }
+    }
+}
+
+@include sm {
+    .container {
+        .container--graphic {
+            top: 5rem;
+            right: -2rem;
+            img {
+                width: 10rem;
+            }
+        }
+    }
+}
+
+@include md {
+    .container {
+        .container--graphic {
+            top: 5rem;
+            right: -3rem;
+            img {
+                width: 12rem;
+            }
+        }
+    }
+}
+
+@include lg {
+    .container {
+        .container--graphic {
+            top: 4rem;
+            right: -3rem;
+            img {
+                width: 13rem;
+            }
+        }
+    }
+    .modal-container {
+        max-width: 78%;
+        .modal--gradient {
+            width: 50%;
+        }
+        .modal--content {
+            width: 50%;
+        }
+    }
+}
+
+@include xl {
+    .container {
+        .container--graphic {
+            top: 1.5rem;
+            img {
+                width: 15rem;
+            }
+        }
+    }
+}
+
+
+
+
+

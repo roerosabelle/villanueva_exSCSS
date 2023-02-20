@@ -1,0 +1,118 @@
+// font styling mixins
+@mixin h1-style {
+    font: {
+        family: $poppins;
+        size: $h1-size;
+        weight: $poppins-semibold;
+    };
+};
+
+@mixin p-style {
+    font: {
+        family: $poppins;
+        size: $p-size;
+        weight: $poppins-regular;
+    };
+};
+
+@mixin a-style {
+    font: {
+        family: $poppins;
+        size: $a-size;
+        weight: $poppins-semibold;     
+    };
+};
+
+@mixin btn-style ($background-color: $primary-color, $new-color: false) {
+    background-color: $primary-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    display: inline-block;
+    max-width: 8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    @if $new-color == true {
+        background-color: white;
+        color: $primary-color;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        padding: 0.5rem 0;
+        display: inline-block;
+        max-width: 8rem;
+        text-align: center;
+    }
+
+}
+
+// spacing mixins
+@mixin container-spacing ($max-width: 42%, $width: true) {
+    width: 78%;
+    max-width: 42%;
+    margin: 1rem auto;
+    padding: 2rem;
+    border: $container-border;
+    position: relative;
+    @if $width == false {
+        max-width: 52%;
+        width: 78%;
+        margin: 1rem auto;
+        padding: 0;
+        border: $container-border;
+        position: relative;
+        border-radius: 0.5rem;
+    }
+}
+
+// media queries mixins
+$breakpoints: (
+    "xs": 360px,
+    "sm": 428px,
+    "md": 576px,
+    "lg": 706px,
+    "xl": 808px,
+);
+
+
+@mixin xs {
+    @media(min-width: map-get($breakpoints, "xs")) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media(min-width: map-get($breakpoints, "sm")) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media(min-width: map-get($breakpoints, "md")) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media(min-width: map-get($breakpoints, "lg")) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media(min-width: map-get($breakpoints, "xl")) {
+        @content;
+    }
+}
+
+
+// modal 
+@mixin modal-popup ($modal: hidden, $visibility: false) {
+    .modal-overlay {
+        visibility: hidden;
+    }
+}
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Remember to include jQuery :) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+        <link rel="stylesheet" href="styles/css/styles.css">
+        <title>villanueva_exSCSS</title>
+    </head>
+    <body>
+
+        <div class="container flex">
+            <div class="container--content">
+                <h1>Elementum sagittis vitae et leo duis ut diam quam.</h1>
+                <p>Dolor sit amet consectetur adipiscing elit duis.</p>
+                <!-- Link to open the modal -->
+                <p><a href="#modal-box" rel="modal:open">Integer Vitae</a></p>
+            </div>
+            <div class="container--graphic">
+                  <img src="../villanueva_exSCSS/images/graphic.svg" alt="Graphic containg purple and blue circles and stars around a grey square.">
+            </div>
+        </div>
+
+        <div id="modal-box" class="modal">
+            <div class="modal-container flex">
+                <div class="half modal--gradient">
+                </div>
+                <div class="half modal--content">
+                    <img src="../villanueva_exSCSS/images/close.svg" alt="x button">
+                    <h1>Ultrices vitae auctor eu augue vitae nunc sed velit dignissim donec ac odio tempor</h1>
+                    <p>Elementum sagittis vitae et leo duis ut diam quam. Dolor sit amet consectetur adipiscing elit duis. At imperdiet dui accumsan sit amet. Sed faucibus turpis in eu mi bibendum neque egestas congue. Cursus euismod quis viverra nibh cras pulvinar mattis. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus.</p>
+                    <a href="#" rel="modal:close">Integer Vitae</a> 
+                    <a id="secondary-btn"  href="#">Imperdiet Dui</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
